@@ -1,0 +1,72 @@
+:root {
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --original: #181818;
+    --amarillo: #FFC107;
+    --rojo: #CB3234;
+    --verde: #3F888F;
+    --negro: #000000;
+    --gris: #D3D3D3;
+    --grismarino: #666F88;
+    --rojorosado: #FFCDD2;
+    --verdeclaro: #C8E6C9;
+    --amarilloclaro: #FFF0C2;
+    --font-verde: #388E3C;
+    --font-rosado: #C62828;
+    --font-amarrillo: #A68B00;
+    --azul: #1976D2;
+    --azulmate: #3E5F8A;
+    --prueba: #003F5C;
+    --primary: #232C30;
+    --secondary: #3D4449;
+    --terceary: #3282B8;
+}
+
+/* Body */
+body {
+    background: linear-gradient(to bottom right, var(--verde), var(--blanco));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    font-size: 1rem;
+}
+.conteiner {
+    background-color: var(--blanco);
+    margin: 6% auto;
+    width: min(40rem, 100%);
+    align-content: center;
+    justify-content: center;
+}
+
+/* Content Form */
+.title-form {
+    color: var(--oscuro);
+    margin: 1.2rem 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.foot-form {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+.btn {
+    justify-self: end;
+    width: 5rem;
+    height: 2rem;
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: darkgreen;
+    border-color: darkgreen;
+}
+label, input {
+    width: 100%;
+}
+.link {
+    justify-self: start;
+    text-decoration: none;
+}

@@ -1,0 +1,38 @@
+{% extends 'registration/baseForm.html' %}
+{% block link %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login/login.css' %}">
+{% endblock %}
+{% block title %}
+    <title>Login</title>
+{% endblock%}
+{% block form %}    
+    <p class="card-title title-form">Iniciar sesión</p>
+    <form action="" method="POST" class="form">
+        {% csrf_token %}
+        <div class="card-body">
+            <div>
+                <label for="username" class="form-label">Usuario:</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+            <div>
+                <label for="password" class="form-label">Contraseña:</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <div class="foot-form">
+                <div>
+                    <p class="">¿No se ha registrado aún?
+                        <a href="{% url 'registro' %}" class="link">Registrarse</a>
+                    </p>   
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+        </div>
+    </form>
+    {% if form.errors %}
+        <div class="alert alert-danger d-flex align-items-center text-alert" role="alert">
+            <strong class="">{{form.non_field_errors}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endif %}
+{% endblock%}

@@ -1,0 +1,68 @@
+:root {
+    --blanco: #FFFFFF;
+    --blanco-r: #F4F4F4;
+    --oscuro: #212121;
+    --original: #181818;
+    --amarillo: #FFC107;
+    --rojo: #CB3234;
+    --verde: #3F888F;
+    --negro: #000000;
+    --gris: #D3D3D3;
+    --grismarino: #666F88;
+    --rojorosado: #FFCDD2;
+    --verdeclaro: #C8E6C9;
+    --amarilloclaro: #FFF0C2;
+    --font-verde: #388E3C;
+    --font-rosado: #C62828;
+    --font-amarrillo: #A68B00;
+    --azul: #1976D2;
+    --azulmate: #3E5F8A;
+    --prueba: #003F5C;
+    --primary: #232C30;
+    --secondary: #3D4449;
+    --terceary: #3282B8;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.link-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+}
+.navbar-text {
+    text-decoration: none;
+    font-size: 1.2rem; 
+}
+.navbar-text:hover {
+    color: var(--verde);
+}
+
+.navbar-menu-pages {
+    display: inline-flex;
+    width: 80rem;
+    justify-content: space-between;
+}
+
+.navbar-img-index {
+    margin-left: 6rem;
+}
+.image-index {
+    width: 100px;
+    height: 50px;
+}
+.navbar-setting {
+    margin-right: 2rem;
+}
+
+.content-footer{
+    background-color: #212529;
+    color: #FFFFFF8C;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-footer {
+    font-size: 1.2rem;
+}

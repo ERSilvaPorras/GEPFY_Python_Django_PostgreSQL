@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Movements</title>
+{% endblock %}
+{% block navbar %}
+    <div class="navbar-menu-pages">
+        <a href="{% url 'index' %}" class="navbar-text link-text">Inicio</a>
+        <a href="{% url 'myData' %}" class="navbar-text link-text">My Data</a>
+        <a href="{% url 'services' %}" class="navbar-text link-text">Services</a>
+        <a href="{% url 'movement' %}" class="navbar-text link-text">Movements</a>
+        <a href="{% url 'reports' %}" class="navbar-text link-text">Graphs and Reports</a>
+        <a href="{% url 'contact' %}" class="navbar-text link-text">Contacts</a>
+    </div>
+    <div class="navbar-setting">
+        <a href="{% url 'logout' %} " class="navbar-text link-text">Salir</a>
+    </div>
+{% endblock %}
+{% block content %}
+    <h1>Movimientos</h1>
+{% endblock%}

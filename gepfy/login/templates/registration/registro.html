@@ -1,0 +1,51 @@
+{% extends 'registration/baseForm.html' %}
+{% block link %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login/register.css' %}">
+    <!-- widget_tweaks -->
+    {% load widget_tweaks %}
+{% endblock %}
+{%block title %}
+    <title>Registro</title>
+{% endblock %}
+{% block form %}
+    <div class="main-content">
+        <p class="card-title title-form">Registrarse</p>
+        <form action="" method="POST" class="form">
+            {% csrf_token %}
+            <div class="card-body abs-center">
+                <div>
+                    <label for="username" class="form-label">Usuario:</label>
+                    {% render_field form.username class='form-control required' %}
+                </div>
+                <div>
+                    <label for="first_name" class="form-label">Nombres:</label>
+                    {% render_field form.first_name class='form-control required' %}
+                </div>
+                <div>
+                    <label for="last_name" class="form-label">Apellidos:</label>
+                    {% render_field form.last_name class='form-control required' %}
+                </div>
+                <div>
+                    <label for="email" class="form-label">Correo Electronico:</label>
+                    {% render_field form.email class='form-control required' %}
+                </div>
+                <div>
+                    <label for="password1" class="form-label">Contraseña:</label>
+                    {% render_field form.password1 class='form-control required' %}
+                </div>
+                <div>
+                    <label for="password2" class="form-label">Repetir contraseña:</label>
+                    {% render_field form.password2 class='form-control required' %}
+                </div>
+                <div class="foot-form">
+                    <a href="{% url 'login' %}" class="link">Iniciar sesión</a>
+                    <input type="submit" value="registrar" class="btn btn-primary">
+                </div>
+            </div> 
+        </form>
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+{% endblock %}
